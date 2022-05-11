@@ -1,0 +1,33 @@
+section{
+  text-align: center;
+}
+h1{
+  margin: 0px;
+  padding: 10px;
+}
+
+header{
+ text-align: center;
+ background-color: #B53A3A;
+}
+
+main{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.grupos{
+  width: 20%;
+  margin: 10px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  background-color: #9C3232;
+}
+
+body{
+  background-color: #802929;
+  color: white;
+  margin: 0px;
+}
