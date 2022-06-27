@@ -1,14 +1,38 @@
-section{
-  text-align: center;
-}
-h1{
-  margin: 0px;
-  padding: 10px;
+@font-face { font-family: QatarBold; src: url('./Qatar2022/Qatar2022Arabic-Bold.ttf'); } 
+@font-face { font-family: QatarHeavy; src: url('./Qatar2022/Qatar2022Arabic-Heavy.ttf'); } 
+
+body {
+  font-family: 'QatarBold';
+  background: rgb(128, 25, 45);
+  background: linear-gradient(120deg, rgba(117,25,43,1) 0%, rgb(35, 6, 16) 100%);
+  color: white;
+  margin: 0 0 50px 0;
 }
 
 header{
- text-align: center;
- background-color: #B53A3A;
+  margin-top: 20px;
+  text-align: center;
+  background: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#logo{
+  width: 80px;
+  height: 80px;
+}
+
+h1{
+  font-size: 30px;
+  margin: 0px;
+  padding: 0px;
+  width: auto;
+}
+
+#fifa {
+  padding-left: 8px;
+  font-family: 'Open Sans', sans-serif;
 }
 
 main{
@@ -17,17 +41,126 @@ main{
   flex-wrap: wrap;
 }
 
-.grupos{
-  width: 20%;
-  margin: 10px;
-  border-style: solid;
-  border-width: 2px;
-  border-color: black;
-  background-color: #9C3232;
+.group-letter{
+  text-align: center;
+  margin: 15px 0;
 }
 
-body{
-  background-color: #802929;
+h2 {
+  font-family: 'QatarHeavy';
+  font-size: 35px;
+}
+
+.group{
+  width: 20%;
+  min-width: 150px;
+  margin: 10px;
+  background: none;
+  padding: 0 20px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.country {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 15px 0;
+}
+
+.country-flag-container {
+  height: 30px;
+  width: 40px;
+  border: solid;
+  border-color: white;
+}
+
+.country-flag {
+  height: 100%;
+  width: 100%; 
+  object-fit: cover;
+}
+
+.country-name {
+  background-color: white;
+  color: brown;
+  clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0 100%);
+  margin: 0;
+  padding-left: .5em;
+  width: 50%;
+}
+
+section{
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.matches {
+  color: black;
+  width: 40%;
+  border: solid 3px black;
+  border-radius: 0 0 5% 5%;
+  overflow: hidden;
+  padding-bottom: 20px;
+  margin: 10px 0;
+  background-color: white;
+}
+
+.matches-group {
   color: white;
-  margin: 0px;
+  background-color: rgb(40, 40, 40);
+  padding: 10px 0;
+  margin: 0;
+  margin-bottom: 20px;
+  border-bottom: solid 3px black;
+  font-size: 20px;
+}
+
+h4 {
+  margin: 0;
+}
+
+.fecha {
+  margin: 20px 0;
+}
+
+form {
+  width: 100%;
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.team-1{
+  width: 30%;
+  text-align: right;
+  margin-right: 5px;
+}
+
+.team-2{
+  width: 30%;
+  text-align: left;
+  margin-left: 5px;
+}
+
+input {
+  margin: 0 2px;
+}
+
+table{
+  margin: auto;
+}
+
+#matches-header {
+  width: 100%;
+}
+
+.fecha form input {
+  width: 2.5rem;
 }
