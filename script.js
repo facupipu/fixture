@@ -1,3 +1,9 @@
+// hacer apnas terminar de carga el dom
+document.addEventListener('DOMContentLoaded', () => {
+  let inputs = document.getElementsByClassName('.groupsMatches');
+  for (let input of inputs) input.value = '';
+});
+
 //crear los grupos y sus equipos
 const TEAMS = {
   groupA: [
@@ -63,8 +69,8 @@ Object.values(TEAMS).forEach(group => {
   })
 })
 //crea las fechas
-const MATCHES = { 
-  groupA: [ {id : "match1A"}, {id : "match2A"}, {id : "match3A"}, {id : "match4A"}, {id : "match5A"}, {id : "match6A"} ], 
+const MATCHES = {
+  groupA: [ {id : "match1A"}, {id : "match2A"}, {id : "match3A"}, {id : "match4A"}, {id : "match5A"}, {id : "match6A"} ],
   groupB: [ {id : "match1B"}, {id : "match2B"}, {id : "match3B"}, {id : "match4B"}, {id : "match5B"}, {id : "match6B"} ],
   groupC: [ {id : "match1C"}, {id : "match2C"}, {id : "match3C"}, {id : "match4C"}, {id : "match5C"}, {id : "match6C"} ],
   groupD: [ {id : "match1D"}, {id : "match2D"}, {id : "match3D"}, {id : "match4D"}, {id : "match5D"}, {id : "match6D"} ],
@@ -104,10 +110,17 @@ const TABLES = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H',]
 //crea los octavos de final
 function playoffs(event){
   event.preventDefault()
-  console.log("crearemos una tabla")
   for (let i = 0; i < TABLES.length; i++) {
     const table = document.getElementById(`${TABLES[i]}`)
-    console.log(table)
+    const PJ = table.getElementsByClassName('pj')
+    console.log(PJ)
+    for (let td of PJ) {
+      if (td.textContent != 3) {
+        alert("Faltan Completar Datos de Partidos")
+        return;
+      }
+    }
+    alerta('Todavia no termine esta parte:/')
   }
 }
 
@@ -130,7 +143,7 @@ function sortTable(tableId, groupTeams){
     const teamName = teamsPositions[i+1].firstElementChild.nextElementSibling
     teamName.textContent =`${sortedGroup[i].name}`
     const pts = teamName.nextElementSibling
-    pts.textContent =`${sortedGroup[i].pts}`  
+    pts.textContent =`${sortedGroup[i].pts}`
     const pj = pts.nextElementSibling
     pj.textContent =`${sortedGroup[i].pj}`
     const pg = pj.nextElementSibling
@@ -144,16 +157,16 @@ function sortTable(tableId, groupTeams){
     const gc = gf.nextElementSibling
     gc.textContent =`${sortedGroup[i].gc}`
     const dif = gc.nextElementSibling
-    dif.textContent =`${sortedGroup[i].dif}`  
+    dif.textContent =`${sortedGroup[i].dif}`
   }
 
 }
 //actualiza la tabla reseteando los valores
 function updateTable(tableId) {
-  
+
   const groupMatches = MATCHES[`group${tableId}`]
   const groupTeams = TEAMS[`group${tableId}`]
-  
+
   Object.values(groupTeams).forEach(team => {
     team.pts = 0
     team.pj = 0
@@ -185,7 +198,7 @@ function updateTable(tableId) {
           team.pts += 1
         }
       }
-      
+
       else if (team.name === match.v) {
         team.gf += match.vgf
         team.gc += match.hgf
@@ -203,7 +216,7 @@ function updateTable(tableId) {
           team.pe += 1
           team.pts += 1
         }
-      } 
+      }
     })
   }
   sortTable (tableId, groupTeams)
@@ -216,10 +229,10 @@ function handleSubmit(event) {
   const goals = match.querySelectorAll('input')
   const home = teams[0].textContent
   const visitor = teams[1].textContent
-  
+
   const homeGoals = parseInt(goals[0].value)
   const visitorGoals = parseInt(goals[1].value)
-  
+
   const table = match.parentElement.parentElement.lastElementChild.id
   const matchClass = match.className
   const matchGroup = MATCHES[`group${table}`]
@@ -227,7 +240,7 @@ function handleSubmit(event) {
   const matchData = matchGroup.find(matchData => matchData.id == matchId)
   matchData.h = home
   matchData.v = visitor
-  
+
   const groupTeams = TEAMS[`group${table}`]
   groupTeams.forEach(team => {
     if (team.name === home) {
@@ -248,7 +261,7 @@ function handleSubmit(event) {
         matchData.hpts = 1
       }
     }
-    
+
     else if (team.name === visitor) {
       matchData.vgf = visitorGoals
       matchData.vgc += homeGoals
@@ -268,7 +281,7 @@ function handleSubmit(event) {
       }
     }
   })
-  
+
   updateTable(table)
 }
 //limita los caracteres del input
@@ -276,9 +289,22 @@ function validateNumber(event) {
   const keyCode = event.keyCode
   const BACKSPACE = 8
   const TAB = 9
-  
+  const SUPR = 46
+  const F5 = 116
+  const LEFT = 37
+  const RIGHT = 39
+
   if (
-    !((keyCode >= 48 && keyCode <= 57) || (keyCode === BACKSPACE) || (keyCode === TAB))
+    !(
+      (keyCode >= 48 && keyCode <= 57) ||
+      (keyCode === BACKSPACE) ||
+      (keyCode === TAB) ||
+      (keyCode === SUPR) ||
+      (keyCode === F5) ||
+      (keyCode === LEFT) ||
+      (keyCode === RIGHT)
+    )
+
     ) {
       event.preventDefault();
     }
@@ -287,8 +313,8 @@ function validateNumber(event) {
 const groups = document.querySelectorAll('.group')
 
 groups.forEach(group => {
-  const matches = group.querySelectorAll('form')    
-  matches.forEach(match => {    
+  const matches = group.querySelectorAll('form')
+  matches.forEach(match => {
     const matchInputs = match.querySelectorAll('input')
     //el formulario se envia cuando ambos inputs son completados
     matchInputs.forEach(input => {
@@ -302,4 +328,3 @@ groups.forEach(group => {
     })
   })
 })
-  

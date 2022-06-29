@@ -1,7 +1,7 @@
 /* body */
 
-@font-face { font-family: QatarBold; src: url('./Qatar2022/Qatar2022Arabic-Bold.ttf'); } 
-@font-face { font-family: QatarHeavy; src: url('./Qatar2022/Qatar2022Arabic-Heavy.ttf'); } 
+@font-face { font-family: QatarBold; src: url('./Qatar2022/Qatar2022Arabic-Bold.ttf'); }
+@font-face { font-family: QatarHeavy; src: url('./Qatar2022/Qatar2022Arabic-Heavy.ttf'); }
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -97,7 +97,7 @@ ul {
 
 .country-flag {
   height: 100%;
-  width: 100%; 
+  width: 100%;
   object-fit: cover;
 }
 
@@ -199,7 +199,13 @@ table{
 }
 
 .crear-button {
-  width: 50%;
-  height: 50px;
+  width: 95%;
+  height: 60px;
   text-align: center;
+  font-family: 'QatarBold';
+  color: white;
+  background-color: rgb(40, 40, 40);
+  font-size: 30px;
+  border-radius: 10px;
+  border: solid 3px black;
 }
