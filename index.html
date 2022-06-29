@@ -20,8 +20,8 @@
   </header>
 
   <main>
-    <div class="group">
-      <ul><h2 class="group-letter">Grupo A</h2>
+    <div class="presentation-group">
+      <ul><h2 class="presentation-group-letter">Grupo A</h2>
 
         <li class="country">
           <div class="country-flag-container">
@@ -58,8 +58,8 @@
 
       </ul>
     </div>    
-    <div class="group">
-      <ul><h2 class="group-letter">Grupo B</h2>
+    <div class="presentation-group">
+      <ul><h2 class="presentation-group-letter">Grupo B</h2>
         
         <li class="country">
           <div class="country-flag-container">
@@ -96,8 +96,8 @@
 
       </ul>
     </div>
-    <div class="group">
-      <ul><h2 class="group-letter">Grupo C</h2>
+    <div class="presentation-group">
+      <ul><h2 class="presentation-group-letter">Grupo C</h2>
 
         <li class="country">
           <div class="country-flag-container">
@@ -134,8 +134,8 @@
           
       </ul>
     </div>
-    <div class="group">
-      <ul><h2 class="group-letter">Grupo D</h2>
+    <div class="presentation-group">
+      <ul><h2 class="presentation-group-letter">Grupo D</h2>
 
         <li class="country">
           <div class="country-flag-container">
@@ -172,8 +172,8 @@
 
       </ul>
     </div>
-    <div class="group">
-      <ul><h2 class="group-letter">Grupo E</h2>
+    <div class="presentation-group">
+      <ul><h2 class="presentation-group-letter">Grupo E</h2>
 
         <li class="country">
           <div class="country-flag-container">
@@ -210,8 +210,8 @@
 
       </ul>
     </div>
-    <div class="group">
-      <ul><h2 class="group-letter">Grupo F</h2>
+    <div class="presentation-group">
+      <ul><h2 class="presentation-group-letter">Grupo F</h2>
 
         <li class="country">
           <div class="country-flag-container">
@@ -248,8 +248,8 @@
 
       </ul>
     </div>
-    <div class="group">
-      <ul><h2 class="group-letter">Grupo G</h2>
+    <div class="presentation-group">
+      <ul><h2 class="presentation-group-letter">Grupo G</h2>
 
         <li class="country">
           <div class="country-flag-container">
@@ -286,8 +286,8 @@
         
       </ul>
     </div>
-    <div class="group">
-      <ul><h2 class="group-letter">Grupo H</h2>
+    <div class="presentation-group">
+      <ul><h2 class="presentation-group-letter">Grupo H</h2>
         
         <li class="country">
           <div class="country-flag-container">
@@ -330,55 +330,61 @@
   
   <section>
     <h2 id="matches-header">Partidos</h2>
-    
-    <div class="matches">
-      <h3 class="matches-group">Grupo A</h3>
-      <div class="fecha">
+
+    <div class="group">
+      <h3 class="group-matches">Grupo A</h3>
+      <div class="date">
         <h4>Fecha 1</h4>
-        <form onsubmit="handleSubmit(event)">
+        <form class="match1" onsubmit="handleSubmit(event)">
           <label class="team-1">Senegal</label>
-          <input type="number" size="2" min="0" max="50" placeholder="--">
-          <input type="number" size="2" min="0" max="50" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
           <label class="team-2">Países Bajos</label>
+          <button type="submit" class="hidden"></button>        
         </form>
-        <form onsubmit="handleSubmit(event)">
+        <form class="match2" onsubmit="handleSubmit(event)">
           <label class="team-1">Qatar</label>
-          <input type="number" size="2" min="0" max="50" placeholder="--">
-          <input type="number" size="2" min="0" max="50" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
           <label class="team-2">Ecuador</label>
+          <button type="submit" class="hidden"></button>        
         </form>
       </div>
-      <div class="fecha">
+      <div class="date">
         <h4>Fecha 2</h4>
-        <form onsubmit="handleSubmit(event)">
+        <form class="match3" onsubmit="handleSubmit(event)">
           <label class="team-1">Qatar</label>
-          <input type="number" size="2" min="0" max="50" placeholder="--">
-          <input type="number" size="2" min="0" max="50" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
           <label class="team-2">Senegal</label>
+          <button type="submit" class="hidden"></button>        
         </form>
-        <form onsubmit="handleSubmit(event)">
+        <form class="match4" onsubmit="handleSubmit(event)">
           <label class="team-1">Países Bajos</label>
-          <input type="number" size="2" min="0" max="50" placeholder="--">
-          <input type="number" size="2" min="0" max="50" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
           <label class="team-2">Ecuador</label>
+          <button type="submit" class="hidden"></button>        
         </form>
       </div>
-      <div class="fecha">
+      <div class="date">
         <h4>Fecha 3</h4>
-        <form onsubmit="handleSubmit(event)">
+        <form class="match5" onsubmit="handleSubmit(event)">
           <label class="team-1">Países Bajos</label>
-          <input type="number" size="2" min="0" max="50" placeholder="--">
-          <input type="number" size="2" min="0" max="50" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
           <label class="team-2">Qatar</label>
+          <button type="submit" class="hidden"></button>        
         </form>
-        <form onsubmit="handleSubmit(event)">
+        <form class="match6" onsubmit="handleSubmit(event)">
           <label class="team-1">Ecuador</label>
-          <input type="number" size="2" min="0" max="50" placeholder="--">
-          <input type="number" size="2" min="0" max="50" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
           <label class="team-2">Senegal</label>
+          <button type="submit" class="hidden"></button>        
         </form>
       </div>
-      <table>
+      <table id="A">
         <thead>
           <tr>
             <th>#</th>
@@ -396,7 +402,7 @@
         <tbody>
           <tr>
             <td>1</td>
-            <td class="equipo">Qatar</td>
+            <td class="team-name">Qatar</td>
             <td class="pts">0</td>
             <td class="pj">0</td>
             <td calss="pg">0</td>
@@ -408,7 +414,7 @@
           </tr>
           <tr>
             <td>2</td>
-            <td class="equipo">Ecuador</td>
+            <td class="team-name">Ecuador</td>
             <td class="pts">0</td>
             <td class="pj">0</td>
             <td calss="pg">0</td>
@@ -420,8 +426,8 @@
           </tr>
           <tr>
             <td>3</td>
-            <td class="equipo">Senegal</td>
-            <td class="pts">0</td>
+            <td class="team-name">Senegal</td>
+            <td class="pts" id="pts-senegal">0</td>
             <td class="pj">0</td>
             <td calss="pg">0</td>
             <td class="pe">0</td>
@@ -432,7 +438,7 @@
           </tr>
           <tr>
             <td>4</td>
-            <td class="equipo">Países Bajos</td>
+            <td class="team-name">Países Bajos</td>
             <td class="pts">0</td>
             <td class="pj">0</td>
             <td calss="pg">0</td>
@@ -446,54 +452,60 @@
       </table>
     </div>
     
-    <div class="matches">
-      <h3 class="matches-group">Grupo B</h3>
-      <div class="fecha">
+    <div class="group">
+      <h3 class="group-matches">Grupo B</h3>
+      <div class="date">
         <h4>Fecha 1</h4>
-        <form onsubmit="handleSubmit(event)">
+        <form class="match1" onsubmit="handleSubmit(event)">
           <label class="team-1">Inglaterra</label>
-          <input type="number" size="2" min="0" max="50" placeholder="--">
-          <input type="number" size="2" min="0" max="50" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
           <label class="team-2">Irán</label>
+          <button type="submit" class="hidden"></button>        
         </form>
-        <form onsubmit="handleSubmit(event)">
+        <form class="match2" onsubmit="handleSubmit(event)">
           <label class="team-1">EE UU</label>
-          <input type="number" size="2" min="0" max="50" placeholder="--">
-          <input type="number" size="2" min="0" max="50" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
           <label class="team-2">Gales</label>
+          <button type="submit" class="hidden"></button>        
         </form>
       </div>
-      <div class="fecha">
+      <div class="date">
         <h4>Fecha 2</h4>
-        <form onsubmit="handleSubmit(event)">
+        <form class="match3" onsubmit="handleSubmit(event)">
           <label class="team-1">Gales</label>
-          <input type="number" size="2" min="0" max="50" placeholder="--">
-          <input type="number" size="2" min="0" max="50" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
           <label class="team-2">Irán</label>
+          <button type="submit" class="hidden"></button>        
         </form>
-        <form onsubmit="handleSubmit(event)">
+        <form class="match4" onsubmit="handleSubmit(event)">
           <label class="team-1">Inglaterra</label>
-          <input type="number" size="2" min="0" max="50" placeholder="--">
-          <input type="number" size="2" min="0" max="50" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
           <label class="team-2">EE UU</label>
+          <button type="submit" class="hidden"></button>        
         </form>
       </div>  
-      <div class="fecha">
+      <div class="date">
         <h4>Fecha 3</h4>
-        <form onsubmit="handleSubmit(event)">
+        <form class="match5" onsubmit="handleSubmit(event)">
           <label class="team-1">Gales</label>
-          <input type="number" size="2" min="0" max="50" placeholder="--">
-          <input type="number" size="2" min="0" max="50" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
           <label class="team-2">Inglaterra</label>
+          <button type="submit" class="hidden"></button>        
         </form>
-        <form onsubmit="handleSubmit(event)">
+        <form class="match6" onsubmit="handleSubmit(event)">
           <label class="team-1">Irán</label>
-          <input type="number" size="2" min="0" max="50" placeholder="--">
-          <input type="number" size="2" min="0" max="50" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
           <label class="team-2">EE UU</label>
+          <button type="submit" class="hidden"></button>        
         </form>
       </div>
-      <table>
+      <table id="B">
         <thead>
           <tr>
             <th>#</th>
@@ -511,7 +523,7 @@
         <tbody>
           <tr>
             <td>1</td>
-            <td class="equipo">Inglaterra</td>
+            <td class="team-name">Inglaterra</td>
             <td class="pts">0</td>
             <td class="pj">0</td>
             <td class="pg">0</td>
@@ -523,7 +535,7 @@
           </tr>
           <tr>
             <td>2</td>
-            <td class="equipo">Irán</td>
+            <td class="team-name">Irán</td>
             <td class="pts">0</td>
             <td class="pj">0</td>
             <td class="pg">0</td>
@@ -535,7 +547,7 @@
           </tr>
           <tr>
             <td>3</td>
-            <td class="equipo">EEUU</td>
+            <td class="team-name">EEUU</td>
             <td class="pts">0</td>
             <td class="pj">0</td>
             <td class="pg">0</td>
@@ -547,7 +559,7 @@
           </tr>
           <tr>
             <td>4</td>
-            <td class="equipo">Gales</td>
+            <td class="team-name">Gales</td>
             <td class="pts">0</td>
             <td class="pj">0</td>
             <td class="pg">0</td>
@@ -561,54 +573,60 @@
       </table>
     </div>
 
-    <div class="matches">
-      <h3 class="matches-group">Grupo C</h3>
-      <div class="fecha">
+    <div class="group">
+      <h3 class="group-matches">Grupo C</h3>
+      <div class="date">
         <h4>Fecha 1</h4>
-        <form onsubmit="handleSubmit(event)">
+        <form class="match1" onsubmit="handleSubmit(event)">
           <label class="team-1">Argentina</label>
-          <input type="number" size="2" min="0" max="50" placeholder="--">
-          <input type="number" size="2" min="0" max="50" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
           <label class="team-2">A. Saudita</label>
+          <button type="submit" class="hidden"></button>        
         </form>
-        <form onsubmit="handleSubmit(event)">
+        <form class="match2" onsubmit="handleSubmit(event)">
           <label class="team-1">México</label>
-          <input type="number" size="2" min="0" max="50" placeholder="--">
-          <input type="number" size="2" min="0" max="50" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
           <label class="team-2">Polonia</label>
+          <button type="submit" class="hidden"></button>        
         </form>
       </div>
-      <div class="fecha">
+      <div class="date">
         <h4>Fecha 2</h4>
-        <form onsubmit="handleSubmit(event)">
+        <form class="match3" onsubmit="handleSubmit(event)">
           <label class="team-1">A. Saudita</label>
-          <input type="number" size="2" min="0" max="50" placeholder="--">
-          <input type="number" size="2" min="0" max="50" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
           <label class="team-2">Polonia</label>
+          <button type="submit" class="hidden"></button>        
         </form>
-        <form onsubmit="handleSubmit(event)">
-          <label class="team-1">Argentian</label>
-          <input type="number" size="2" min="0" max="50" placeholder="--">
-          <input type="number" size="2" min="0" max="50" placeholder="--">
+        <form class="match4" onsubmit="handleSubmit(event)">
+          <label class="team-1">Argentina</label>
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
           <label class="team-2">México</label>
+          <button type="submit" class="hidden"></button>        
         </form>
       </div> 
-      <div class="fecha">
+      <div class="date">
         <h4>Fecha 3</h4>
-        <form onsubmit="handleSubmit(event)">
+        <form class="match5" onsubmit="handleSubmit(event)">
           <label class="team-1">Argentina</label>
-          <input type="number" size="2" min="0" max="50" placeholder="--">
-          <input type="number" size="2" min="0" max="50" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
           <label class="team-2">Polonia</label>
+          <button type="submit" class="hidden"></button>        
         </form>
-        <form onsubmit="handleSubmit(event)">
+        <form class="match6" onsubmit="handleSubmit(event)">
           <label class="team-1">A. Saudita</label>
-          <input type="number" size="2" min="0" max="50" placeholder="--">
-          <input type="number" size="2" min="0" max="50" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
           <label class="team-2">México</label>
+          <button type="submit" class="hidden"></button>        
         </form>
       </div>
-      <table>
+      <table id="C">
         <thead>
           <tr>
             <th>#</th>
@@ -626,7 +644,7 @@
         <tbody>
           <tr>
             <td>1</td>
-            <td class="equipo">Argentina</td>
+            <td class="team-name">Argentina</td>
             <td class="pts">0</td>
             <td class="pj">0</td>
             <td class="pg">0</td>
@@ -638,7 +656,7 @@
           </tr>
           <tr>
             <td>2</td>
-            <td class="equipo">A. Saudita</td>
+            <td class="team-name">A. Saudita</td>
             <td class="pts">0</td>
             <td class="pj">0</td>
             <td class="pg">0</td>
@@ -650,7 +668,7 @@
           </tr>
           <tr>
             <td>3</td>
-            <td class="equipo">México</td>
+            <td class="team-name">México</td>
             <td class="pts">0</td>
             <td class="pj">0</td>
             <td class="pg">0</td>
@@ -662,7 +680,7 @@
           </tr>
           <tr>
             <td>4</td>
-            <td class="equipo">Polonia</td>
+            <td class="team-name">Polonia</td>
             <td class="pts">0</td>
             <td class="pj">0</td>
             <td class="pg">0</td>
@@ -676,54 +694,60 @@
       </table>
     </div>
 
-    <div class="matches">
-      <h3 class="matches-group">Grupo D</h3>
-      <div class="fecha">
+    <div class="group">
+      <h3 class="group-matches">Grupo D</h3>
+      <div class="date">
         <h4>Fecha 1</h4>
-        <form onsubmit="handleSubmit(event)">
+        <form class="match1" onsubmit="handleSubmit(event)">
           <label class="team-1">Dinamarca</label>
-          <input type="number" size="2" min="0" max="50" placeholder="--">
-          <input type="number" size="2" min="0" max="50" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
           <label class="team-2">Túnez</label>
+          <button type="submit" class="hidden"></button>        
         </form>
-        <form onsubmit="handleSubmit(event)">
+        <form class="match2" onsubmit="handleSubmit(event)">
           <label class="team-1">Francia</label>
-          <input type="number" size="2" min="0" max="50" placeholder="--">
-          <input type="number" size="2" min="0" max="50" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
           <label class="team-2">Australia</label>
+          <button type="submit" class="hidden"></button>        
         </form>
       </div>
-      <div class="fecha">
+      <div class="date">
         <h4>Fecha 2</h4>
-        <form onsubmit="handleSubmit(event)">
+        <form class="match3" onsubmit="handleSubmit(event)">
           <label class="team-1">Australia</label>
-          <input type="number" size="2" min="0" max="50" placeholder="--">
-          <input type="number" size="2" min="0" max="50" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
           <label class="team-2">Túnez</label>
+          <button type="submit" class="hidden"></button>        
         </form>
-        <form onsubmit="handleSubmit(event)">
+        <form class="match4" onsubmit="handleSubmit(event)">
           <label class="team-1">Francia</label>
-          <input type="number" size="2" min="0" max="50" placeholder="--">
-          <input type="number" size="2" min="0" max="50" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
           <label class="team-2">Dinamarca</label>
+          <button type="submit" class="hidden"></button>        
         </form>
       </div>
-      <div class="fecha">
+      <div class="date">
         <h4>Fecha 3</h4>
-        <form onsubmit="handleSubmit(event)">
+        <form class="match5" onsubmit="handleSubmit(event)">
           <label class="team-1">Australia</label>
-          <input type="number" size="2" min="0" max="50" placeholder="--">
-          <input type="number" size="2" min="0" max="50" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
           <label class="team-2">Dinamarca</label>
+          <button type="submit" class="hidden"></button>        
         </form>
-        <form onsubmit="handleSubmit(event)">
+        <form class="match6" onsubmit="handleSubmit(event)">
           <label class="team-1">Francia</label>
-          <input type="number" size="2" min="0" max="50" placeholder="--">
-          <input type="number" size="2" min="0" max="50" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
           <label class="team-2">Túnez</label>
+          <button type="submit" class="hidden"></button>        
         </form>
       </div>
-      <table>
+      <table id="D">
         <thead>
           <tr>
             <th>#</th>
@@ -741,7 +765,7 @@
         <tbody>
           <tr>
             <td>1</td>
-            <td class="equipo">Francia</td>
+            <td class="team-name">Francia</td>
             <td class="pts">0</td>
             <td class="pj">0</td>
             <td class="pg">0</td>
@@ -753,7 +777,7 @@
           </tr>
           <tr>
             <td>2</td>
-            <td class="equipo">Australia</td>
+            <td class="team-name">Australia</td>
             <td class="pts">0</td>
             <td class="pj">0</td>
             <td class="pg">0</td>
@@ -765,7 +789,7 @@
           </tr>
           <tr>
             <td>3</td>
-            <td class="equipo">Dinamarca</td>
+            <td class="team-name">Dinamarca</td>
             <td class="pts">0</td>
             <td class="pj">0</td>
             <td class="pg">0</td>
@@ -777,7 +801,7 @@
           </tr>
           <tr>
             <td>4</td>
-            <td class="equipo">Túnez</td>
+            <td class="team-name">Túnez</td>
             <td class="pts">0</td>
             <td class="pj">0</td>
             <td class="pg">0</td>
@@ -791,54 +815,60 @@
       </table>
     </div>
 
-    <div class="matches">
-      <h3 class="matches-group">Grupo E</h3>
-      <div class="fecha">
+    <div class="group">
+      <h3 class="group-matches">Grupo E</h3>
+      <div class="date">
         <h4>Fecha 1</h4>
-        <form onsubmit="handleSubmit(event)">
+        <form class="match1" onsubmit="handleSubmit(event)">
           <label class="team-1">Alemania</label>
-          <input type="number" size="2" min="0" max="50" placeholder="--">
-          <input type="number" size="2" min="0" max="50" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
           <label class="team-2">Japón</label>
+          <button type="submit" class="hidden"></button>        
         </form>
-        <form onsubmit="handleSubmit(event)">
+        <form class="match2" onsubmit="handleSubmit(event)">
           <label class="team-1">España</label>
-          <input type="number" size="2" min="0" max="50" placeholder="--">
-          <input type="number" size="2" min="0" max="50" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
           <label class="team-2">Costa Rica</label>
+          <button type="submit" class="hidden"></button>        
         </form>
       </div>
-      <div class="fecha">
+      <div class="date">
         <h4>Fecha 2</h4>
-        <form onsubmit="handleSubmit(event)">
+        <form class="match3" onsubmit="handleSubmit(event)">
           <label class="team-1">Costa Rica</label>
-          <input type="number" size="2" min="0" max="50" placeholder="--">
-          <input type="number" size="2" min="0" max="50" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
           <label class="team-2">Japón</label>
+          <button type="submit" class="hidden"></button>        
         </form>
-        <form onsubmit="handleSubmit(event)">
+        <form class="match4" onsubmit="handleSubmit(event)">
           <label class="team-1">España</label>
-          <input type="number" size="2" min="0" max="50" placeholder="--">
-          <input type="number" size="2" min="0" max="50" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
           <label class="team-2">Alemania</label>
+          <button type="submit" class="hidden"></button>        
         </form>
       </div>
-      <div class="fecha">
+      <div class="date">
         <h4>Fecha 3</h4>
-        <form onsubmit="handleSubmit(event)">
+        <form class="match5" onsubmit="handleSubmit(event)">
           <label class="team-1">España</label>
-          <input type="number" size="2" min="0" max="50" placeholder="--">
-          <input type="number" size="2" min="0" max="50" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
           <label class="team-2">Japón</label>
+          <button type="submit" class="hidden"></button>        
         </form>
-        <form onsubmit="handleSubmit(event)">
+        <form class="match6" onsubmit="handleSubmit(event)">
           <label class="team-1">Costa Rica</label>
-          <input type="number" size="2" min="0" max="50" placeholder="--">
-          <input type="number" size="2" min="0" max="50" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
           <label class="team-2">Alemania</label>
+          <button type="submit" class="hidden"></button>        
         </form>
       </div>
-      <table>
+      <table id="E">
         <thead>
           <tr>
             <th>#</th>
@@ -856,7 +886,7 @@
         <tbody>
           <tr>
             <td>1</td>
-            <td class="equipo">España</td>
+            <td class="team-name">España</td>
             <td class="pts">0</td>
             <td class="pj">0</td>
             <td class="pg">0</td>
@@ -868,7 +898,7 @@
           </tr>
           <tr>
             <td>2</td>
-            <td class="equipo">Costa Rica</td>
+            <td class="team-name">Costa Rica</td>
             <td class="pts">0</td>
             <td class="pj">0</td>
             <td class="pg">0</td>
@@ -880,7 +910,7 @@
           </tr>
           <tr>
             <td>3</td>
-            <td class="equipo">Alemania</td>
+            <td class="team-name">Alemania</td>
             <td class="pts">0</td>
             <td class="pj">0</td>
             <td class="pg">0</td>
@@ -892,7 +922,7 @@
           </tr>
           <tr>
             <td>4</td>
-            <td class="equipo">Japón</td>
+            <td class="team-name">Japón</td>
             <td class="pts">0</td>
             <td class="pj">0</td>
             <td class="pg">0</td>
@@ -906,54 +936,60 @@
       </table>
     </div>
 
-    <div class="matches">
-      <h3 class="matches-group">Grupo F</h3>
-      <div class="fecha">
+    <div class="group">
+      <h3 class="group-matches">Grupo F</h3>
+      <div class="date">
         <h4>Fecha 1</h4>
-        <form onsubmit="handleSubmit(event)">
+        <form class="match1" onsubmit="handleSubmit(event)">
           <label class="team-1">Marruecos</label>
-          <input type="number" size="2" min="0" max="50" placeholder="--">
-          <input type="number" size="2" min="0" max="50" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
           <label class="team-2">Croacia</label>
+          <button type="submit" class="hidden"></button>        
         </form>
-        <form onsubmit="handleSubmit(event)">
+        <form class="match2" onsubmit="handleSubmit(event)">
           <label class="team-1">Bélgica</label>
-          <input type="number" size="2" min="0" max="50" placeholder="--">
-          <input type="number" size="2" min="0" max="50" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
           <label class="team-2">Canadá</label>
+          <button type="submit" class="hidden"></button>        
         </form>
       </div>
-      <div class="fecha">
+      <div class="date">
         <h4>Fecha 2</h4>
-        <form onsubmit="handleSubmit(event)">
+        <form class="match3" onsubmit="handleSubmit(event)">
           <label class="team-1">Bélgica</label>
-          <input type="number" size="2" min="0" max="50" placeholder="--">
-          <input type="number" size="2" min="0" max="50" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
           <label class="team-2">Marruecos</label>
+          <button type="submit" class="hidden"></button>        
         </form>
-        <form onsubmit="handleSubmit(event)">
+        <form class="match4" onsubmit="handleSubmit(event)">
           <label class="team-1">Canadá</label>
-          <input type="number" size="2" min="0" max="50" placeholder="--">
-          <input type="number" size="2" min="0" max="50" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
           <label class="team-2">Croacia</label>
+          <button type="submit" class="hidden"></button>        
         </form>
       </div>
-      <div class="fecha">
+      <div class="date">
         <h4>Fecha 3</h4>
-        <form onsubmit="handleSubmit(event)">
+        <form class="match5" onsubmit="handleSubmit(event)">
           <label class="team-1">Bélgica</label>
-          <input type="number" size="2" min="0" max="50" placeholder="--">
-          <input type="number" size="2" min="0" max="50" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
           <label class="team-2">Croacia</label>
+          <button type="submit" class="hidden"></button>        
         </form>
-        <form onsubmit="handleSubmit(event)">
+        <form class="match6" onsubmit="handleSubmit(event)">
           <label class="team-1">Canadá</label>
-          <input type="number" size="2" min="0" max="50" placeholder="--">
-          <input type="number" size="2" min="0" max="50" placeholder="--">
-          <label class="team-2">Marruecoss</label>
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
+          <label class="team-2">Marruecos</label>
+          <button type="submit" class="hidden"></button>        
         </form>
       </div>
-      <table>
+      <table id="F">
         <thead>
           <tr>
             <th>#</th>
@@ -971,7 +1007,7 @@
         <tbody>
           <tr>
             <td>1</td>
-            <td class="equipo">Bélgica</td>
+            <td class="team-name">Bélgica</td>
             <td class="pts">0</td>
             <td class="pj">0</td>
             <td class="pg">0</td>
@@ -983,7 +1019,7 @@
           </tr>
           <tr>
             <td>2</td>
-            <td class="equipo">Canadá</td>
+            <td class="team-name">Canadá</td>
             <td class="pts">0</td>
             <td class="pj">0</td>
             <td class="pg">0</td>
@@ -995,7 +1031,7 @@
           </tr>
           <tr>
             <td>3</td>
-            <td class="equipo">Marruecos</td>
+            <td class="team-name">Marruecos</td>
             <td class="pts">0</td>
             <td class="pj">0</td>
             <td class="pg">0</td>
@@ -1007,7 +1043,7 @@
           </tr>
           <tr>
             <td>4</td>
-            <td class="equipo">Croacia</td>
+            <td class="team-name">Croacia</td>
             <td class="pts">0</td>
             <td class="pj">0</td>
             <td class="pg">0</td>
@@ -1021,54 +1057,60 @@
       </table>
     </div>
 
-    <div class="matches">
-      <h3 class="matches-group">Grupo G</h3>
-      <div class="fecha">
+    <div class="group">
+      <h3 class="group-matches">Grupo G</h3>
+      <div class="date">
         <h4>Fecha 1</h4>
-        <form onsubmit="handleSubmit(event)">
+        <form class="match1" onsubmit="handleSubmit(event)">
           <label class="team-1">Suiza</label>
-          <input type="number" size="2" min="0" max="50" placeholder="--">
-          <input type="number" size="2" min="0" max="50" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
           <label class="team-2">Camerún</label>
+          <button type="submit" class="hidden"></button>        
         </form>
-        <form onsubmit="handleSubmit(event)">
+        <form class="match2" onsubmit="handleSubmit(event)">
           <label class="team-1">Brasil</label>
-          <input type="number" size="2" min="0" max="50" placeholder="--">
-          <input type="number" size="2" min="0" max="50" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
           <label class="team-2">Serbia</label>
+          <button type="submit" class="hidden"></button>        
         </form>
       </div>
-      <div class="fecha">
+      <div class="date">
         <h4>Fecha 2</h4>
-        <form onsubmit="handleSubmit(event)">
+        <form class="match3" onsubmit="handleSubmit(event)">
           <label class="team-1">Serbia</label>
-          <input type="number" size="2" min="0" max="50" placeholder="--">
-          <input type="number" size="2" min="0" max="50" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
           <label class="team-2">Camerún</label>
+          <button type="submit" class="hidden"></button>        
         </form>
-        <form onsubmit="handleSubmit(event)">
+        <form class="match4" onsubmit="handleSubmit(event)">
           <label class="team-1">Brasil</label>
-          <input type="number" size="2" min="0" max="50" placeholder="--">
-          <input type="number" size="2" min="0" max="50" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
           <label class="team-2">Suiza</label>
+          <button type="submit" class="hidden"></button>        
         </form>
       </div>
-      <div class="fecha">
+      <div class="date">
         <h4>Fecha 3</h4>
-        <form onsubmit="handleSubmit(event)">
+        <form class="match5" onsubmit="handleSubmit(event)">
           <label class="team-1">Brasil</label>
-          <input type="number" size="2" min="0" max="50" placeholder="--">
-          <input type="number" size="2" min="0" max="50" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
           <label class="team-2">Camerún</label>
+          <button type="submit" class="hidden"></button>        
         </form>
-        <form onsubmit="handleSubmit(event)">
+        <form class="match6" onsubmit="handleSubmit(event)">
           <label class="team-1">Serbia</label>
-          <input type="number" size="2" min="0" max="50" placeholder="--">
-          <input type="number" size="2" min="0" max="50" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
           <label class="team-2">Suiza</label>
+          <button type="submit" class="hidden"></button>        
         </form>
       </div>
-      <table>
+      <table id="G">
         <thead>
           <tr>
             <th>#</th>
@@ -1086,7 +1128,7 @@
         <tbody>
           <tr>
             <td>1</td>
-            <td class="equipo">Brasil</td>
+            <td class="team-name">Brasil</td>
             <td class="pts">0</td>
             <td class="pj">0</td>
             <td class="pg">0</td>
@@ -1098,7 +1140,7 @@
           </tr>
           <tr>
             <td>2</td>
-            <td class="equipo">Serbia</td>
+            <td class="team-name">Serbia</td>
             <td class="pts">0</td>
             <td class="pj">0</td>
             <td class="pg">0</td>
@@ -1110,7 +1152,7 @@
           </tr>
           <tr>
             <td>3</td>
-            <td class="equipo">Suiza</td>
+            <td class="team-name">Suiza</td>
             <td class="pts">0</td>
             <td class="pj">0</td>
             <td class="pg">0</td>
@@ -1122,7 +1164,7 @@
           </tr>
           <tr>
             <td>4</td>
-            <td class="equipo">Camerún</td>
+            <td class="team-name">Camerún</td>
             <td class="pts">0</td>
             <td class="pj">0</td>
             <td class="pg">0</td>
@@ -1136,54 +1178,60 @@
       </table>
     </div>
 
-    <div class="matches">
-      <h3 class="matches-group">Grupo H</h3>
-      <div class="fecha">
+    <div class="group">
+      <h3 class="group-matches">Grupo H</h3>
+      <div class="date">
         <h4>Fecha 1</h4>
-        <form onsubmit="handleSubmit(event)">
+        <form class="match1" onsubmit="handleSubmit(event)">
           <label class="team-1">Uruguay</label>
-          <input type="number" size="2" min="0" max="50" placeholder="--">
-          <input type="number" size="2" min="0" max="50" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
           <label class="team-2">Corea del Sur</label>
+          <button type="submit" class="hidden"></button>        
         </form>
-        <form onsubmit="handleSubmit(event)">
+        <form class="match2" onsubmit="handleSubmit(event)">
           <label class="team-1">Portugal</label>
-          <input type="number" size="2" min="0" max="50" placeholder="--">
-          <input type="number" size="2" min="0" max="50" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
           <label class="team-2">Ghana</label>
+          <button type="submit" class="hidden"></button>        
         </form>
       </div>
-      <div class="fecha">
+      <div class="date">
         <h4>Fecha 2</h4>
-        <form onsubmit="handleSubmit(event)">
+        <form class="match3" onsubmit="handleSubmit(event)">
           <label class="team-1">Ghana</label>
-          <input type="number" size="2" min="0" max="50" placeholder="--">
-          <input type="number" size="2" min="0" max="50" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
           <label class="team-2">Corea del Sur</label>
+          <button type="submit" class="hidden"></button>        
         </form>
-        <form onsubmit="handleSubmit(event)">
+        <form class="match4" onsubmit="handleSubmit(event)">
           <label class="team-1">Portugal</label>
-          <input type="number" size="2" min="0" max="50" placeholder="--">
-          <input type="number" size="2" min="0" max="50" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
           <label class="team-2">Uruguay</label>
+          <button type="submit" class="hidden"></button>        
         </form>
       </div>  
-      <div class="fecha">
+      <div class="date">
         <h4>Fecha 3</h4>
-        <form onsubmit="handleSubmit(event)">
+        <form class="match5" onsubmit="handleSubmit(event)">
           <label class="team-1">Portugal</label>
-          <input type="number" size="2" min="0" max="50" placeholder="--">
-          <input type="number" size="2" min="0" max="50" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
           <label class="team-2">Corea del Sur</label>
+          <button type="submit" class="hidden"></button>        
         </form>
-        <form onsubmit="handleSubmit(event)">
+        <form class="match6" onsubmit="handleSubmit(event)">
           <label class="team-1">Ghana</label>
-          <input type="number" size="2" min="0" max="50" placeholder="--">
-          <input type="number" size="2" min="0" max="50" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
+          <input type="number" calss="groupsMatches" size="2" min="0" max="99" placeholder="--">
           <label class="team-2">Uruguay</label>
+          <button type="submit" class="hidden"></button>        
         </form>
       </div>
-      <table>
+      <table id="H">
         <thead>
           <tr>
             <th>#</th>
@@ -1201,7 +1249,7 @@
         <tbody>
           <tr>
             <td>1</td>
-            <td class="equipo">Portugal</td>
+            <td class="team-name">Portugal</td>
             <td class="pts">0</td>
             <td class="pj">0</td>
             <td class="pg">0</td>
@@ -1213,7 +1261,7 @@
           </tr>
           <tr>
             <td>2</td>
-            <td class="equipo">Ghana</td>
+            <td class="team-name">Ghana</td>
             <td class="pts">0</td>
             <td class="pj">0</td>
             <td class="pg">0</td>
@@ -1225,7 +1273,7 @@
           </tr>
           <tr>
             <td>3</td>
-            <td class="equipo">Uruguay</td>
+            <td class="team-name">Uruguay</td>
             <td class="pts">0</td>
             <td class="pj">0</td>
             <td class="pg">0</td>
@@ -1237,7 +1285,7 @@
           </tr>
           <tr>
             <td>4</td>
-            <td class="equipo">Corea del Sur</td>
+            <td class="team-name">Corea del Sur</td>
             <td class="pts">0</td>
             <td class="pj">0</td>
             <td class="pg">0</td>
@@ -1250,10 +1298,12 @@
         </tbody>
       </table>
     </div>
-
+    <form class="crear" onsubmit="playoffs(event)">
+      <input class="crear-button" type="submit" value="Crear Brackets">
+    </form>
   </section>
 
-  <script type="text/javascript" src="script.js"></script>
+  <script src="./script.js"></script>
   </body>
 
 </html>

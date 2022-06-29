@@ -1,5 +1,17 @@
+/* body */
+
 @font-face { font-family: QatarBold; src: url('./Qatar2022/Qatar2022Arabic-Bold.ttf'); } 
 @font-face { font-family: QatarHeavy; src: url('./Qatar2022/Qatar2022Arabic-Heavy.ttf'); } 
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
 
 body {
   font-family: 'QatarBold';
@@ -8,6 +20,8 @@ body {
   color: white;
   margin: 0 0 50px 0;
 }
+
+/* header */
 
 header{
   margin-top: 20px;
@@ -35,13 +49,23 @@ h1{
   font-family: 'Open Sans', sans-serif;
 }
 
+/* presentacion de grupos y equipos */
+
 main{
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
 }
 
-.group-letter{
+.presentation-group{
+  width: 20%;
+  min-width: 150px;
+  margin: 10px;
+  background: none;
+  padding: 0 20px;
+}
+
+.presentation-group-letter{
   text-align: center;
   margin: 15px 0;
 }
@@ -49,14 +73,6 @@ main{
 h2 {
   font-family: 'QatarHeavy';
   font-size: 35px;
-}
-
-.group{
-  width: 20%;
-  min-width: 150px;
-  margin: 10px;
-  background: none;
-  padding: 0 20px;
 }
 
 ul {
@@ -94,6 +110,16 @@ ul {
   width: 50%;
 }
 
+hr {
+  margin-top: 30px;
+  height: 20px;
+  width: 400px;
+  clip-path: polygon(0 50%, 3% 0%, 6% 45%, 94% 45%, 97% 0%, 100% 50%, 97% 100%, 94% 55%, 6% 55%, 3% 100%);
+  background-color: rgb(237, 79, 108);
+}
+
+/* partidos */
+
 section{
   text-align: center;
   display: flex;
@@ -101,7 +127,7 @@ section{
   flex-wrap: wrap;
 }
 
-.matches {
+.group {
   color: black;
   width: 40%;
   border: solid 3px black;
@@ -112,7 +138,7 @@ section{
   background-color: white;
 }
 
-.matches-group {
+.group-matches {
   color: white;
   background-color: rgb(40, 40, 40);
   padding: 10px 0;
@@ -122,15 +148,15 @@ section{
   font-size: 20px;
 }
 
-h4 {
+.group h4 {
   margin: 0;
 }
 
-.fecha {
+.date {
   margin: 20px 0;
 }
 
-form {
+.group form {
   width: 100%;
   margin: 10px 0;
   display: flex;
@@ -149,8 +175,10 @@ form {
   margin-left: 5px;
 }
 
-input {
+.date form input {
   margin: 0 2px;
+  text-align: center;
+  width: 2rem;
 }
 
 table{
@@ -161,6 +189,17 @@ table{
   width: 100%;
 }
 
-.fecha form input {
-  width: 2.5rem;
+.hidden {
+  display: none;
+}
+
+.crear {
+  margin: 50px;
+  width: 100%;
+}
+
+.crear-button {
+  width: 50%;
+  height: 50px;
+  text-align: center;
 }
