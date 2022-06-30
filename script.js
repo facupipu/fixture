@@ -1,8 +1,10 @@
 // hacer apnas terminar de carga el dom
 document.addEventListener('DOMContentLoaded', () => {
-  let inputs = document.getElementsByClassName('.groupsMatches');
-  for (let input of inputs) input.value = '';
+  let inputs = document.getElementsByClassName('groupsMatches');
+  for (let input of inputs) input.value = ''
+  document.getElementById("bracket").className ="hidden"
 });
+
 
 //crear los grupos y sus equipos
 const TEAMS = {
@@ -68,7 +70,7 @@ Object.values(TEAMS).forEach(group => {
     team.dif = 0
   })
 })
-//crea las fechas
+//crea los grupos y sus partidos
 const MATCHES = {
   groupA: [ {id : "match1A"}, {id : "match2A"}, {id : "match3A"}, {id : "match4A"}, {id : "match5A"}, {id : "match6A"} ],
   groupB: [ {id : "match1B"}, {id : "match2B"}, {id : "match3B"}, {id : "match4B"}, {id : "match5B"}, {id : "match6B"} ],
@@ -79,7 +81,7 @@ const MATCHES = {
   groupG: [ {id : "match1G"}, {id : "match2G"}, {id : "match3G"}, {id : "match4G"}, {id : "match5G"}, {id : "match6G"} ],
   groupH: [ {id : "match1H"}, {id : "match2H"}, {id : "match3H"}, {id : "match4H"}, {id : "match5H"}, {id : "match6H"} ]
 }
-
+//definir valores predeterminados a los partidos
 Object.values(MATCHES).forEach(group => {
   group.forEach(match =>{
     //valores predeterminados para home
@@ -107,7 +109,7 @@ Object.values(MATCHES).forEach(group => {
 
 const TABLES = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H',]
 
-//crea los octavos de final
+//activa los brackets de eliminatorias
 function playoffs(event){
   event.preventDefault()
   for (let i = 0; i < TABLES.length; i++) {
@@ -120,25 +122,38 @@ function playoffs(event){
         return;
       }
     }
-    alerta('Todavia no termine esta parte:/')
+  }
+  document.getElementById("bracket").className = "bracket";
+  alert('Todavia no termine esta parte:/')
+}
+
+// generar inputs randoms
+function quickFill(event){
+  event.preventDefault()
+  console.log("llenar los partidos")
+  const matches = document.querySelectorAll('.match1, .match2, .match3, .match4, .match5, .match6')
+  for (let match of matches) {
+    const inputs = match.querySelectorAll('input')
+    for (let input of inputs) {
+      input.value = Math.floor(Math.random() * 5)
+    }
+    match.querySelector('button[type="submit"]').click()
   }
 }
 
 //ordenar y completar la tabla
 function sortTable(tableId, groupTeams){
-
+  
   const sortedGroup = groupTeams.sort((a, b)=> {
-  if (a.pts === b.pts){
-    return a.dif > b.dif ? -1 : 1
-  } else {
-    return a.pts > b.pts ? -1 : 1
+    if (a.pts === b.pts){
+      return a.dif > b.dif ? -1 : 1
+    } else {
+      return a.pts > b.pts ? -1 : 1
   }
   })
-  console.log(sortedGroup)
   const table = document.getElementById(`${tableId}`)
   for (let i = 0; i < sortedGroup.length; i++) {
     const teamsPositions = table.querySelectorAll('tr')
-    console.log(teamsPositions[i+1])
 
     const teamName = teamsPositions[i+1].firstElementChild.nextElementSibling
     teamName.textContent =`${sortedGroup[i].name}`
@@ -151,7 +166,7 @@ function sortTable(tableId, groupTeams){
     const pe = pg.nextElementSibling
     pe.textContent =`${sortedGroup[i].pe}`
     const pp = pe.nextElementSibling
-    pp.textContent =`${sortedGroup[i].pe}`
+    pp.textContent =`${sortedGroup[i].pp}`
     const gf = pp.nextElementSibling
     gf.textContent =`${sortedGroup[i].gf}`
     const gc = gf.nextElementSibling
@@ -216,6 +231,7 @@ function updateTable(tableId) {
           team.pe += 1
           team.pts += 1
         }
+        console.log(team)
       }
     })
   }

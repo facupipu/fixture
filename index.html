@@ -20,7 +20,7 @@
     </div>
   </header>
 
-  <main>
+  <section id="presentation">
     <div class="presentation-group">
       <ul><h2 class="presentation-group-letter">Grupo A</h2>
 
@@ -325,11 +325,11 @@
 
       </ul>
     </div>
-  </main>
+  </section>
 
-  <hr>
+  <hr class="sectionsdivision">
 
-  <section>
+  <section id="matches-section">
     <h2 id="matches-header">Partidos</h2>
 
     <div class="group">
@@ -1302,6 +1302,187 @@
     <form class="crear" onsubmit="playoffs(event)">
       <input class="crear-button" type="submit" value="Crear Brackets">
     </form>
+    <form class="quickFill" onsubmit="quickFill(event)">
+      <input class="quickFill" type="submit" value="Random-inador">
+    </form>
+  </section>
+
+  <section id="bracket" class="hidden">
+    <div class="eighths">
+      <form class="eightsMatches">
+        <fieldset>
+          <label>Local</label>
+          <input type="numer" class="bracketMatches" size="2" min="0" max="99" placeholder="--">
+        </fieldset>
+        <fieldset>
+          <label>Visita</label>
+          <input type="numer" class="bracketMatches" size="2" min="0" max="99" placeholder="--">  
+        </fieldset>
+        <button type="submit" class="hidden"></button>
+      </form>
+      <form class="eightsMatches">
+        <fieldset>
+          <label>Local</label>
+          <input type="numer" class="bracketMatches" size="2" min="0" max="99" placeholder="--">
+        </fieldset>
+        <fieldset>
+          <label>Visita</label>
+          <input type="numer" class="bracketMatches" size="2" min="0" max="99" placeholder="--">  
+        </fieldset>
+        <button type="submit" class="hidden"></button>
+      </form>
+      <form class="eightsMatches">
+        <fieldset>
+          <label>Local</label>
+          <input type="numer" class="bracketMatches" size="2" min="0" max="99" placeholder="--">
+        </fieldset>
+        <fieldset>
+          <label>Visita</label>
+          <input type="numer" class="bracketMatches" size="2" min="0" max="99" placeholder="--">  
+        </fieldset>
+        <button type="submit" class="hidden"></button>
+      </form>
+      <form class="eightsMatches">
+        <fieldset>
+          <label>Local</label>
+          <input type="numer" class="bracketMatches" size="2" min="0" max="99" placeholder="--">
+        </fieldset>
+        <fieldset>
+          <label>Visita</label>
+          <input type="numer" class="bracketMatches" size="2" min="0" max="99" placeholder="--">  
+        </fieldset>
+        <button type="submit" class="hidden"></button>
+      </form>
+    </div>
+    <div class="quarters">
+      <form class="quarterMatches">
+        <fieldset>
+          <label>Local</label>
+          <input type="numer" class="bracketMatches" size="2" min="0" max="99" placeholder="--">
+        </fieldset>
+        <fieldset>
+          <label>Visita</label>
+          <input type="numer" class="bracketMatches" size="2" min="0" max="99" placeholder="--">  
+        </fieldset>
+        <button type="submit" class="hidden"></button>
+      </form>
+      <form class="quarterMatches">
+        <fieldset>
+          <label>Local</label>
+          <input type="numer" class="bracketMatches" size="2" min="0" max="99" placeholder="--">
+        </fieldset>
+        <fieldset>
+          <label>Visita</label>
+          <input type="numer" class="bracketMatches" size="2" min="0" max="99" placeholder="--">  
+        </fieldset>
+        <button type="submit" class="hidden"></button>
+      </form>
+    </div>
+    <div class="semis">
+      <form class="semisMatches">
+        <fieldset>
+          <label>Local</label>
+          <input type="numer" class="bracketMatches" size="2" min="0" max="99" placeholder="--">
+        </fieldset>
+        <fieldset>
+          <label>Visita</label>
+          <input type="numer" class="bracketMatches" size="2" min="0" max="99" placeholder="--">  
+        </fieldset>
+        <button type="submit" class="hidden"></button>
+      </form>
+    </div>
+    <div class="final">
+      <form class="finalMatch">
+        <label>Local</label>
+        <input type="numer" class="bracketMatches" size="2" min="0" max="99" placeholder="--">
+        <input type="numer" class="bracketMatches" size="2" min="0" max="99" placeholder="--">
+        <label>Visita</label>
+        <button type="submit" class="hidden"></button>
+      </form>
+    </div>
+    <div class="semis">
+      <form class="semisMatches">
+        <fieldset>
+          <input type="numer" class="bracketMatches" size="2" min="0" max="99" placeholder="--">
+          <label>Local</label>
+        </fieldset>
+        <fieldset>
+          <input type="numer" class="bracketMatches" size="2" min="0" max="99" placeholder="--">
+          <label>Visita</label>  
+        </fieldset>
+        <button type="submit" class="hidden"></button>
+      </form>
+    </div>
+    <div class="quarters">
+      <form class="quarterMatches">
+        <fieldset>
+          <input type="numer" class="bracketMatches" size="2" min="0" max="99" placeholder="--">
+          <label>Local</label>
+        </fieldset>
+        <fieldset>
+          <input type="numer" class="bracketMatches" size="2" min="0" max="99" placeholder="--">
+          <label>Visita</label>  
+        </fieldset>
+        <button type="submit" class="hidden"></button>
+      </form>
+      <form class="quarterMatches">
+        <fieldset>
+          <input type="numer" class="bracketMatches" size="2" min="0" max="99" placeholder="--">
+          <label>Local</label>
+        </fieldset>
+        <fieldset>
+          <input type="numer" class="bracketMatches" size="2" min="0" max="99" placeholder="--">
+          <label>Visita</label>  
+        </fieldset>
+        <button type="submit" class="hidden"></button>
+      </form>
+    </div>
+    <div class="eighths">
+      <form class="eightsMatches">
+        <fieldset>
+          <input type="numer" class="bracketMatches" size="2" min="0" max="99" placeholder="--">
+          <label>Local</label>
+        </fieldset>
+        <fieldset>
+          <input type="numer" class="bracketMatches" size="2" min="0" max="99" placeholder="--">
+          <label>Visita</label>  
+        </fieldset>
+        <button type="submit" class="hidden"></button>
+      </form>
+      <form class="eightsMatches">
+        <fieldset>
+          <input type="numer" class="bracketMatches" size="2" min="0" max="99" placeholder="--">
+          <label>Local</label>
+        </fieldset>
+        <fieldset>
+          <input type="numer" class="bracketMatches" size="2" min="0" max="99" placeholder="--">
+          <label>Visita</label>  
+        </fieldset>
+        <button type="submit" class="hidden"></button>
+      </form>
+      <form class="eightsMatches">
+        <fieldset>
+          <input type="numer" class="bracketMatches" size="2" min="0" max="99" placeholder="--">
+          <label>Local</label>
+        </fieldset>
+        <fieldset>
+          <input type="numer" class="bracketMatches" size="2" min="0" max="99" placeholder="--">
+          <label>Visita</label>  
+        </fieldset>
+        <button type="submit" class="hidden"></button>
+      </form>
+      <form class="eightsMatches">
+        <fieldset>
+          <input type="numer" class="bracketMatches" size="2" min="0" max="99" placeholder="--">
+          <label>Local</label>
+        </fieldset>
+        <fieldset>
+          <input type="numer" class="bracketMatches" size="2" min="0" max="99" placeholder="--">
+          <label>Visita</label>  
+        </fieldset>
+        <button type="submit" class="hidden"></button>
+      </form>
+    </div>
   </section>
 
   <script src="./script.js"></script>
