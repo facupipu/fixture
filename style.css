@@ -231,6 +231,7 @@ table{
   text-align: center;
   font-family: 'QatarBold';
   font-weight: 600;
+  background-color: white;
   border: solid 3px black;
   border-radius: 8px;
 }
@@ -250,6 +251,7 @@ table{
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 
 #bracket {
@@ -267,15 +269,15 @@ table{
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  flex-grow: 1;
+  width: 20%;
   width: auto;
 }
 #bracket .final {
-  flex-grow: 3;
+  width: 40%;
 }
 
 #bracket form {
-  width: 160px;
+  width: 90%;
   font-size: 15px;
   color: white;
   background-color: rgb(40, 40, 40);

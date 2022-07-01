@@ -145,6 +145,8 @@ function bracketMatch(matchData){
   }
   else if (goal1 == goal2){
     alert("Lamentablemente no pude crear un sistema de penales, así que volvé a poner el resultado imaginando que es el de los penales.")
+    //evita que en ciertas ocaciones se crashe la página
+    document.querySelector(".groupsMatches").focus({preventScroll:true});
     return
   }
   return winner
