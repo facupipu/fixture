@@ -1299,191 +1299,202 @@
         </tbody>
       </table>
     </div>
-    <form class="crear" onsubmit="playoffs(event)">
+    <form class="crear" onsubmit="brackets(event)">
       <input class="crear-button" type="submit" value="Crear Brackets">
     </form>
-    <form class="quickFill" onsubmit="quickFill(event)">
+    <form class="control-button" onsubmit="quickFill(event)">
       <input class="quickFill" type="submit" value="Random-inador">
     </form>
   </section>
 
-  <section id="bracket" class="hidden">
-    <div class="eighths">
-      <form class="eightsMatches">
-        <fieldset>
-          <label>Local</label>
-          <input type="numer" class="bracketMatches" size="2" min="0" max="99" placeholder="--">
-        </fieldset>
-        <fieldset>
-          <label>Visita</label>
-          <input type="numer" class="bracketMatches" size="2" min="0" max="99" placeholder="--">  
-        </fieldset>
-        <button type="submit" class="hidden"></button>
-      </form>
-      <form class="eightsMatches">
-        <fieldset>
-          <label>Local</label>
-          <input type="numer" class="bracketMatches" size="2" min="0" max="99" placeholder="--">
-        </fieldset>
-        <fieldset>
-          <label>Visita</label>
-          <input type="numer" class="bracketMatches" size="2" min="0" max="99" placeholder="--">  
-        </fieldset>
-        <button type="submit" class="hidden"></button>
-      </form>
-      <form class="eightsMatches">
-        <fieldset>
-          <label>Local</label>
-          <input type="numer" class="bracketMatches" size="2" min="0" max="99" placeholder="--">
-        </fieldset>
-        <fieldset>
-          <label>Visita</label>
-          <input type="numer" class="bracketMatches" size="2" min="0" max="99" placeholder="--">  
-        </fieldset>
-        <button type="submit" class="hidden"></button>
-      </form>
-      <form class="eightsMatches">
-        <fieldset>
-          <label>Local</label>
-          <input type="numer" class="bracketMatches" size="2" min="0" max="99" placeholder="--">
-        </fieldset>
-        <fieldset>
-          <label>Visita</label>
-          <input type="numer" class="bracketMatches" size="2" min="0" max="99" placeholder="--">  
-        </fieldset>
-        <button type="submit" class="hidden"></button>
-      </form>
+  <section id="PlayOffs" class="hidden">
+    <div id="champion" class="champion"></div>
+    
+    <div id="bracket">
+      <div class="eighths">
+        <form id="eighths1" class="eightsMatches" onsubmit="eighthsSubmit(event)">
+          <fieldset>
+            <label class="eighthsTeams">1A</label>
+            <input type="number" class="bracketMatches" size="2" min="0" max="99" placeholder="--">
+          </fieldset>
+          <fieldset>
+            <label class="eighthsTeams">2B</label>
+            <input type="number" class="bracketMatches" size="2" min="0" max="99" placeholder="--">  
+          </fieldset>
+          <button type="submit" class="hidden"></button>
+        </form>
+        <form id="eighths2" class="eightsMatches" onsubmit="eighthsSubmit(event)">
+          <fieldset>
+            <label class="eighthsTeams">1C</label>
+            <input type="number" class="bracketMatches" size="2" min="0" max="99" placeholder="--">
+          </fieldset>
+          <fieldset>
+            <label class="eighthsTeams">2D</label>
+            <input type="number" class="bracketMatches" size="2" min="0" max="99" placeholder="--">  
+          </fieldset>
+          <button type="submit" class="hidden"></button>
+        </form>
+        <form id="eighths3" class="eightsMatches" onsubmit="eighthsSubmit(event)">
+          <fieldset>
+            <label class="eighthsTeams">1E</label>
+            <input type="number" class="bracketMatches" size="2" min="0" max="99" placeholder="--">
+          </fieldset>
+          <fieldset>
+            <label class="eighthsTeams">2F</label>
+            <input type="number" class="bracketMatches" size="2" min="0" max="99" placeholder="--">  
+          </fieldset>
+          <button type="submit" class="hidden"></button>
+        </form>
+        <form id="eighths4" class="eightsMatches" onsubmit="eighthsSubmit(event)">
+          <fieldset>
+            <label class="eighthsTeams">1G</label>
+            <input type="number" class="bracketMatches" size="2" min="0" max="99" placeholder="--">
+          </fieldset>
+          <fieldset>
+            <label class="eighthsTeams">2H</label>
+            <input type="number" class="bracketMatches" size="2" min="0" max="99" placeholder="--">  
+          </fieldset>
+          <button type="submit" class="hidden"></button>
+        </form>
+      </div>
+      <div class="quarters">
+        <form id="quarter1" class="quarterMatches" onsubmit="quartersSubmit(event)">
+          <fieldset id="eighthwinner1">
+            <label>Sin Definir</label>
+            <input type="number" class="bracketMatches" size="2" min="0" max="99" placeholder="--">
+          </fieldset>
+          <fieldset id="eighthwinner2">
+            <label>Sin Definir</label>
+            <input type="number" class="bracketMatches" size="2" min="0" max="99" placeholder="--">  
+          </fieldset>
+          <button type="submit" class="hidden"></button>
+        </form>
+        <form id="quarter2" class="quarterMatches" onsubmit="quartersSubmit(event)">
+          <fieldset id="eighthwinner3">
+            <label>Sin Definir</label>
+            <input type="number" class="bracketMatches" size="2" min="0" max="99" placeholder="--">
+          </fieldset>
+          <fieldset id="eighthwinner4">
+            <label>Sin Definir</label>
+            <input type="number" class="bracketMatches" size="2" min="0" max="99" placeholder="--">  
+          </fieldset>
+          <button type="submit" class="hidden"></button>
+        </form>
+      </div>
+      <div class="semis">
+        <form id="semifin1" class="semisMatches" onsubmit="semisSubmit(event)">
+          <fieldset id="quarterwinner1">
+            <label>Sin Definir</label>
+            <input type="number" class="bracketMatches" size="2" min="0" max="99" placeholder="--">
+          </fieldset>
+          <fieldset id="quarterwinner2">
+            <label>Sin Definir</label>
+            <input type="number" class="bracketMatches" size="2" min="0" max="99" placeholder="--">  
+          </fieldset>
+          <button type="submit" class="hidden"></button>
+        </form>
+      </div>
+      <div id="final" class="final">
+        <form class="finalMa1" onsubmit="finalSubmit(event)">
+          <label id="finalist1">Sin Definir</label>
+          <input type="number" class="bracketMatches" size="2" min="0" max="99" placeholder="--">
+          <input type="number" class="bracketMatches" size="2" min="0" max="99" placeholder="--">
+          <label id="finalist2">Sin Definir</label>
+          <button type="submit" class="hidden"></button>
+        </form>
+      </div>
+      <div class="semis">
+        <form id="semifin2" class="semisMatches" onsubmit="semisSubmit(event)">
+          <fieldset id="quarterwinner3">
+            <input type="number" class="bracketMatches" size="2" min="0" max="99" placeholder="--">
+            <label>Sin Definir</label>
+          </fieldset>
+          <fieldset id="quarterwinner4">
+            <input type="number" class="bracketMatches" size="2" min="0" max="99" placeholder="--">
+            <label>Sin Definir</label>  
+          </fieldset>
+          <button type="submit" class="hidden"></button>
+        </form>
+      </div>
+      <div class="quarters">
+        <form id="quarter3" class="quarterMatches" onsubmit="quartersSubmit(event)">
+          <fieldset id="eighthwinner5">
+            <input type="number" class="bracketMatches" size="2" min="0" max="99" placeholder="--">
+            <label>Sin Definir</label>
+          </fieldset>
+          <fieldset id="eighthwinner6">
+            <input type="number" class="bracketMatches" size="2" min="0" max="99" placeholder="--">
+            <label>Sin Definir</label>  
+          </fieldset>
+          <button type="submit" class="hidden"></button>
+        </form>
+        <form id="quarter4" class="quarterMatches" onsubmit="quartersSubmit(event)">
+          <fieldset id="eighthwinner7">
+            <input type="number" class="bracketMatches" size="2" min="0" max="99" placeholder="--">
+            <label>Sin Definir</label>
+          </fieldset>
+          <fieldset id="eighthwinner8">
+            <input type="number" class="bracketMatches" size="2" min="0" max="99" placeholder="--">
+            <label>Sin Definir</label>  
+          </fieldset>
+          <button type="submit" class="hidden"></button>
+        </form>
+      </div>
+      <div class="eighths">
+        <form id="eighths5" class="eightsMatches" onsubmit="eighthsSubmit(event)">
+          <fieldset>
+            <input type="number" class="bracketMatches" size="2" min="0" max="99" placeholder="--">
+            <label class="eighthsTeams">2A</label>
+          </fieldset>
+          <fieldset>
+            <input type="number" class="bracketMatches" size="2" min="0" max="99" placeholder="--">
+            <label class="eighthsTeams">1B</label>  
+          </fieldset>
+          <button type="submit" class="hidden"></button>
+        </form>
+        <form id="eighths6" class="eightsMatches" onsubmit="eighthsSubmit(event)">
+          <fieldset>
+            <input type="number" class="bracketMatches" size="2" min="0" max="99" placeholder="--">
+            <label class="eighthsTeams">2C</label>
+          </fieldset>
+          <fieldset>
+            <input type="number" class="bracketMatches" size="2" min="0" max="99" placeholder="--">
+            <label class="eighthsTeams">1D</label>  
+          </fieldset>
+          <button type="submit" class="hidden"></button>
+        </form>
+        <form id="eighths7" class="eightsMatches" onsubmit="eighthsSubmit(event)">
+          <fieldset>
+            <input type="number" class="bracketMatches" size="2" min="0" max="99" placeholder="--">
+            <label class="eighthsTeams">2E</label>
+          </fieldset>
+          <fieldset>
+            <input type="number" class="bracketMatches" size="2" min="0" max="99" placeholder="--">
+            <label class="eighthsTeams">1F</label>  
+          </fieldset>
+          <button type="submit" class="hidden"></button>
+        </form>
+        <form id="eighths8" class="eightsMatches" onsubmit="eighthsSubmit(event)">
+          <fieldset>
+            <input type="number" class="bracketMatches" size="2" min="0" max="99" placeholder="--">
+            <label class="eighthsTeams">2G</label>
+          </fieldset>
+          <fieldset>
+            <input type="number" class="bracketMatches" size="2" min="0" max="99" placeholder="--">
+            <label class="eighthsTeams">1H</label>  
+          </fieldset>
+          <button type="submit" class="hidden"></button>
+        </form>
+      </div>
     </div>
-    <div class="quarters">
-      <form class="quarterMatches">
-        <fieldset>
-          <label>Local</label>
-          <input type="numer" class="bracketMatches" size="2" min="0" max="99" placeholder="--">
-        </fieldset>
-        <fieldset>
-          <label>Visita</label>
-          <input type="numer" class="bracketMatches" size="2" min="0" max="99" placeholder="--">  
-        </fieldset>
-        <button type="submit" class="hidden"></button>
-      </form>
-      <form class="quarterMatches">
-        <fieldset>
-          <label>Local</label>
-          <input type="numer" class="bracketMatches" size="2" min="0" max="99" placeholder="--">
-        </fieldset>
-        <fieldset>
-          <label>Visita</label>
-          <input type="numer" class="bracketMatches" size="2" min="0" max="99" placeholder="--">  
-        </fieldset>
-        <button type="submit" class="hidden"></button>
-      </form>
-    </div>
-    <div class="semis">
-      <form class="semisMatches">
-        <fieldset>
-          <label>Local</label>
-          <input type="numer" class="bracketMatches" size="2" min="0" max="99" placeholder="--">
-        </fieldset>
-        <fieldset>
-          <label>Visita</label>
-          <input type="numer" class="bracketMatches" size="2" min="0" max="99" placeholder="--">  
-        </fieldset>
-        <button type="submit" class="hidden"></button>
-      </form>
-    </div>
-    <div class="final">
-      <form class="finalMatch">
-        <label>Local</label>
-        <input type="numer" class="bracketMatches" size="2" min="0" max="99" placeholder="--">
-        <input type="numer" class="bracketMatches" size="2" min="0" max="99" placeholder="--">
-        <label>Visita</label>
-        <button type="submit" class="hidden"></button>
-      </form>
-    </div>
-    <div class="semis">
-      <form class="semisMatches">
-        <fieldset>
-          <input type="numer" class="bracketMatches" size="2" min="0" max="99" placeholder="--">
-          <label>Local</label>
-        </fieldset>
-        <fieldset>
-          <input type="numer" class="bracketMatches" size="2" min="0" max="99" placeholder="--">
-          <label>Visita</label>  
-        </fieldset>
-        <button type="submit" class="hidden"></button>
-      </form>
-    </div>
-    <div class="quarters">
-      <form class="quarterMatches">
-        <fieldset>
-          <input type="numer" class="bracketMatches" size="2" min="0" max="99" placeholder="--">
-          <label>Local</label>
-        </fieldset>
-        <fieldset>
-          <input type="numer" class="bracketMatches" size="2" min="0" max="99" placeholder="--">
-          <label>Visita</label>  
-        </fieldset>
-        <button type="submit" class="hidden"></button>
-      </form>
-      <form class="quarterMatches">
-        <fieldset>
-          <input type="numer" class="bracketMatches" size="2" min="0" max="99" placeholder="--">
-          <label>Local</label>
-        </fieldset>
-        <fieldset>
-          <input type="numer" class="bracketMatches" size="2" min="0" max="99" placeholder="--">
-          <label>Visita</label>  
-        </fieldset>
-        <button type="submit" class="hidden"></button>
-      </form>
-    </div>
-    <div class="eighths">
-      <form class="eightsMatches">
-        <fieldset>
-          <input type="numer" class="bracketMatches" size="2" min="0" max="99" placeholder="--">
-          <label>Local</label>
-        </fieldset>
-        <fieldset>
-          <input type="numer" class="bracketMatches" size="2" min="0" max="99" placeholder="--">
-          <label>Visita</label>  
-        </fieldset>
-        <button type="submit" class="hidden"></button>
-      </form>
-      <form class="eightsMatches">
-        <fieldset>
-          <input type="numer" class="bracketMatches" size="2" min="0" max="99" placeholder="--">
-          <label>Local</label>
-        </fieldset>
-        <fieldset>
-          <input type="numer" class="bracketMatches" size="2" min="0" max="99" placeholder="--">
-          <label>Visita</label>  
-        </fieldset>
-        <button type="submit" class="hidden"></button>
-      </form>
-      <form class="eightsMatches">
-        <fieldset>
-          <input type="numer" class="bracketMatches" size="2" min="0" max="99" placeholder="--">
-          <label>Local</label>
-        </fieldset>
-        <fieldset>
-          <input type="numer" class="bracketMatches" size="2" min="0" max="99" placeholder="--">
-          <label>Visita</label>  
-        </fieldset>
-        <button type="submit" class="hidden"></button>
-      </form>
-      <form class="eightsMatches">
-        <fieldset>
-          <input type="numer" class="bracketMatches" size="2" min="0" max="99" placeholder="--">
-          <label>Local</label>
-        </fieldset>
-        <fieldset>
-          <input type="numer" class="bracketMatches" size="2" min="0" max="99" placeholder="--">
-          <label>Visita</label>  
-        </fieldset>
-        <button type="submit" class="hidden"></button>
-      </form>
-    </div>
+    <form class="control-button" onsubmit="quickDelate(event)">
+      <input class="quickDelate" type="submit" value="Resetear Brackets">
+    </form>
   </section>
+  
+  <footer>
+    <p>Made by <a href="https://github.com/facupipu" target="_blank">Facundo Piputto</a></p>
+  </footer>
 
   <script src="./script.js"></script>
   </body>

@@ -1,12 +1,11 @@
-// hacer apnas terminar de carga el dom
+// hacer apenas terminar de carga el dom
 document.addEventListener('DOMContentLoaded', () => {
   let inputs = document.getElementsByClassName('groupsMatches');
   for (let input of inputs) input.value = ''
-  document.getElementById("bracket").className ="hidden"
+  document.getElementById("PlayOffs").className ="hidden"
 });
 
-
-//crear los grupos y sus equipos
+//crea los grupos y sus equipos
 const TEAMS = {
   groupA: [
     { name: "Qatar" },
@@ -57,7 +56,7 @@ const TEAMS = {
     { name: "Corea del Sur" },
   ]
 }
-//definir valores predeterminados a los grupos
+//define valores predeterminados a los grupos
 Object.values(TEAMS).forEach(group => {
   group.forEach(team => {
     team.pts = 0
@@ -81,7 +80,7 @@ const MATCHES = {
   groupG: [ {id : "match1G"}, {id : "match2G"}, {id : "match3G"}, {id : "match4G"}, {id : "match5G"}, {id : "match6G"} ],
   groupH: [ {id : "match1H"}, {id : "match2H"}, {id : "match3H"}, {id : "match4H"}, {id : "match5H"}, {id : "match6H"} ]
 }
-//definir valores predeterminados a los partidos
+//define valores predeterminados a los partidos
 Object.values(MATCHES).forEach(group => {
   group.forEach(match =>{
     //valores predeterminados para home
@@ -106,31 +105,203 @@ Object.values(MATCHES).forEach(group => {
     match.vpj = 0
   })
 })
-
+//define un array de tablas
 const TABLES = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H',]
 
+//limpia los brackets
+function quickDelate(event){
+  event.preventDefault()
+  const bracket = document.getElementById('bracket')
+  const inputs = bracket.querySelectorAll('input')
+  for (let input of inputs){
+    input.value = null
+  }
+  const allPhases = bracket.querySelectorAll('.quarters, .semis, #final')
+  for (let phases of allPhases){
+    const teams = phases.querySelectorAll('label') 
+    for(let team of teams){
+      team.textContent = 'Sin Definir'
+    }
+  }
+  const champion = document.getElementById('champion')
+  champion.textContent = null
+}
+
+//funcion general para todos los partidos de los brackets
+function bracketMatch(matchData){
+  const match = matchData
+  const teams = match.querySelectorAll('label')
+  const goals = match.querySelectorAll('input')
+  const team1 = teams[0].textContent
+  const team2 = teams[1].textContent
+  const goal1 = parseInt(goals[0].value)
+  const goal2 = parseInt(goals[1].value)
+  let winner = ""
+  if (goal1 > goal2){
+    winner = team1
+  }
+  else if (goal1 < goal2){
+    winner = team2
+  }
+  else if (goal1 == goal2){
+    alert("Lamentablemente no pude crear un sistema de penales, así que volvé a poner el resultado imaginando que es el de los penales.")
+    return
+  }
+  return winner
+}
+
+function finalSubmit(event){
+  event.preventDefault()
+  console.log("funca")
+  const match = event.target
+  //agarra el 7mo caracter de del id del formulario
+  const teams = match.querySelectorAll('label')
+  // for (let team of teams) {
+  //   if (team.textContent == "Sin Definir"){
+  //     alert('Faltan Equipos para este partido')
+  //     const goals = match.querySelectorAll('input')
+  //     for (let goal of goals) {
+  //       goal.value = null
+  //     }
+  //   return
+  // }
+  // }
+  const winner = bracketMatch(match)
+  if (winner.textContent == "") {
+    return
+  }
+  const champion = document.getElementById('champion')
+  champion.textContent=`¡${winner} Campeon!`
+}
+
+function semisSubmit(event){
+  event.preventDefault()
+  const match = event.target
+  //agarra el 7mo caracter de del id del formulario
+  const matchId = match.id
+  const winnerId = matchId[7]
+  const teams = match.querySelectorAll('label')
+  for (let team of teams) {
+    if (team.textContent == "Sin Definir"){
+    alert('Faltan Equipos para este partido')
+    const goals = match.querySelectorAll('input')
+    for (let goal of goals) {
+      goal.value = null
+    }
+    return
+  }
+  }
+  const winner = bracketMatch(match)
+  if (winner.textContent == "") {
+    return
+  }
+  console.log(winner, winnerId)
+  const Finalist = document.getElementById(`finalist${winnerId}`)
+  Finalist.textContent = winner
+}
+
+function quartersSubmit(event){
+  event.preventDefault()
+  const match = event.target
+  //agarra el 7mo caracter de del id del formulario
+  const matchId = match.id
+  const winnerId = matchId[7]
+  const teams = match.querySelectorAll('label')
+  for (let team of teams) {
+    if (team.textContent == "Sin Definir"){
+    alert('Faltan Equipos para este partido')
+    const goals = match.querySelectorAll('input')
+    for (let goal of goals) {
+      goal.value = null
+    }
+    return
+  }
+  }
+  const winner = bracketMatch(match)
+  if (winner.textContent == "") {
+    return
+  }
+  console.log(winner, winnerId)
+  const semisTeam = document.getElementById(`quarterwinner${winnerId}`)
+  semisTeam.querySelector('label').textContent = winner
+}
+
+function eighthsSubmit(event){
+  event.preventDefault()
+  
+  const match = event.target
+  //agarra el 7mo caracter de del id del formulario
+  const matchId = match.id
+  const winnerId = matchId[7]
+  const winner = bracketMatch(match)
+  if (winner == undefined) {
+    return
+  }
+  console.log(winner, winnerId)
+  const quarterTeam = document.getElementById(`eighthwinner${winnerId}`)
+  quarterTeam.querySelector('label').textContent = winner
+}
+
 //activa los brackets de eliminatorias
-function playoffs(event){
+function brackets(event){
   event.preventDefault()
   for (let i = 0; i < TABLES.length; i++) {
     const table = document.getElementById(`${TABLES[i]}`)
     const PJ = table.getElementsByClassName('pj')
-    console.log(PJ)
     for (let td of PJ) {
       if (td.textContent != 3) {
-        alert("Faltan Completar Datos de Partidos")
         return;
       }
     }
   }
-  document.getElementById("bracket").className = "bracket";
-  alert('Todavia no termine esta parte:/')
+  document.getElementById("PlayOffs").className = "PlayOffs";
+  
+  //perdon por esta crotrada, si no no llego para el viernes
+  const qualifiedTeam1 = document.getElementById('A').getElementsByClassName('team-name')[0].textContent
+  const qualifiedTeam2 = document.getElementById('B').getElementsByClassName('team-name')[1].textContent
+  const qualifiedTeam3 = document.getElementById('C').getElementsByClassName('team-name')[0].textContent
+  const qualifiedTeam4 = document.getElementById('D').getElementsByClassName('team-name')[1].textContent
+  const qualifiedTeam5 = document.getElementById('E').getElementsByClassName('team-name')[0].textContent
+  const qualifiedTeam6 = document.getElementById('F').getElementsByClassName('team-name')[1].textContent
+  const qualifiedTeam7 = document.getElementById('G').getElementsByClassName('team-name')[0].textContent
+  const qualifiedTeam8 = document.getElementById('H').getElementsByClassName('team-name')[1].textContent
+  const qualifiedTeam9 = document.getElementById('A').getElementsByClassName('team-name')[1].textContent
+  const qualifiedTeam10 = document.getElementById('B').getElementsByClassName('team-name')[0].textContent
+  const qualifiedTeam11 = document.getElementById('C').getElementsByClassName('team-name')[1].textContent
+  const qualifiedTeam12 = document.getElementById('D').getElementsByClassName('team-name')[0].textContent
+  const qualifiedTeam13 = document.getElementById('E').getElementsByClassName('team-name')[1].textContent
+  const qualifiedTeam14 = document.getElementById('F').getElementsByClassName('team-name')[0].textContent
+  const qualifiedTeam15 = document.getElementById('G').getElementsByClassName('team-name')[1].textContent
+  const qualifiedTeam16 = document.getElementById('H').getElementsByClassName('team-name')[0].textContent
+
+  const qualifiedTeams = [
+    `${qualifiedTeam1}`,
+    `${qualifiedTeam2}`,
+    `${qualifiedTeam3}`,
+    `${qualifiedTeam4}`,
+    `${qualifiedTeam5}`,
+    `${qualifiedTeam6}`,
+    `${qualifiedTeam7}`,
+    `${qualifiedTeam8}`,
+    `${qualifiedTeam9}`,
+    `${qualifiedTeam10}`,
+    `${qualifiedTeam11}`,
+    `${qualifiedTeam12}`,
+    `${qualifiedTeam13}`,
+    `${qualifiedTeam14}`,
+    `${qualifiedTeam15}`,
+    `${qualifiedTeam16}`,
+  ]
+
+  const eighthsTeams = document.querySelectorAll('.eighthsTeams')
+  for (let [index, team] of eighthsTeams.entries()){
+    team.textContent = qualifiedTeams[index]
+  }
 }
 
-// generar inputs randoms
+//genera inputs randoms para los grupos
 function quickFill(event){
   event.preventDefault()
-  console.log("llenar los partidos")
   const matches = document.querySelectorAll('.match1, .match2, .match3, .match4, .match5, .match6')
   for (let match of matches) {
     const inputs = match.querySelectorAll('input')
@@ -141,7 +312,7 @@ function quickFill(event){
   }
 }
 
-//ordenar y completar la tabla
+//ordena y completa las tablas de grupos
 function sortTable(tableId, groupTeams){
   
   const sortedGroup = groupTeams.sort((a, b)=> {
@@ -176,7 +347,8 @@ function sortTable(tableId, groupTeams){
   }
 
 }
-//actualiza la tabla reseteando los valores
+
+//actualiza la tabla del grupo modificado reseteando sus valores
 function updateTable(tableId) {
 
   const groupMatches = MATCHES[`group${tableId}`]
@@ -231,12 +403,12 @@ function updateTable(tableId) {
           team.pe += 1
           team.pts += 1
         }
-        console.log(team)
       }
     })
   }
   sortTable (tableId, groupTeams)
 }
+
 //modifica los datos del partido complpetado
 function handleSubmit(event) {
   event.preventDefault()
@@ -245,7 +417,6 @@ function handleSubmit(event) {
   const goals = match.querySelectorAll('input')
   const home = teams[0].textContent
   const visitor = teams[1].textContent
-
   const homeGoals = parseInt(goals[0].value)
   const visitorGoals = parseInt(goals[1].value)
 
@@ -300,7 +471,8 @@ function handleSubmit(event) {
 
   updateTable(table)
 }
-//limita los caracteres del input
+
+//limita los caracteres de los goles
 function validateNumber(event) {
   const keyCode = event.keyCode
   const BACKSPACE = 8
@@ -326,6 +498,7 @@ function validateNumber(event) {
     }
 }
 
+//eventListener para los partidos de grupos
 const groups = document.querySelectorAll('.group')
 
 groups.forEach(group => {
@@ -342,5 +515,22 @@ groups.forEach(group => {
       })
       input.addEventListener('keydown', validateNumber)
     })
+  })
+})
+
+//eventListener para los partidos de los brackets
+const bracket = document.getElementById('bracket')
+const matches = bracket.querySelectorAll('form')
+matches.forEach(match => {
+  const matchInputs = match.querySelectorAll('input')
+  //el formulario se envia cuando ambos inputs son completados
+  matchInputs.forEach(input => {
+    input.addEventListener('focusout', (event) => {
+      for (input of matchInputs) {
+        if (input.value === "") return
+      }
+      match.querySelector('button[type="submit"]').click()
+    })
+    input.addEventListener('keydown', validateNumber)
   })
 })
