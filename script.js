@@ -1,6 +1,6 @@
 // hacer apenas terminar de carga el dom
 document.addEventListener('DOMContentLoaded', () => {
-  let inputs = document.getElementsByClassName('groupsMatches');
+  let inputs = document.querySelectorAll('input[type=number]');
   for (let input of inputs) input.value = ''
   document.getElementById("PlayOffs").className ="hidden"
 });
@@ -156,16 +156,16 @@ function finalSubmit(event){
   const match = event.target
   //agarra el 7mo caracter de del id del formulario
   const teams = match.querySelectorAll('label')
-  // for (let team of teams) {
-  //   if (team.textContent == "Sin Definir"){
-  //     alert('Faltan Equipos para este partido')
-  //     const goals = match.querySelectorAll('input')
-  //     for (let goal of goals) {
-  //       goal.value = null
-  //     }
-  //   return
-  // }
-  // }
+  for (let team of teams) {
+    if (team.textContent == "Sin Definir"){
+      alert('Faltan Equipos para este partido')
+      const goals = match.querySelectorAll('input')
+      for (let goal of goals) {
+        goal.value = null
+      }
+    return
+  }
+  }
   const winner = bracketMatch(match)
   if (winner.textContent == "") {
     return
@@ -250,6 +250,7 @@ function brackets(event){
     const PJ = table.getElementsByClassName('pj')
     for (let td of PJ) {
       if (td.textContent != 3) {
+        alert("Faltan Completar Datos de Partidos.")
         return;
       }
     }
